@@ -1,0 +1,14 @@
+.user-register {
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.register-form {
+    max-width: 600px;
+}
+

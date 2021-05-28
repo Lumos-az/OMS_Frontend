@@ -1,0 +1,67 @@
+.TopBar{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: nowrap;
+    height: 64px;
+    align-items: center;
+    box-shadow: 0 0 6px #888888;
+    position: relative;
+    z-index: 999;
+    background-color: #ffffff;
+    padding-right: 15px;
+    width: 100%;
+}
+
+.logo{
+    width: 45px;
+    height: 50px;
+    padding-top: 10px;
+   margin-left: 6%;
+    margin-right: 10px;
+}
+
+.User{
+    padding-top: 10px;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.Menu{
+    margin-left: 10px;
+    margin-right: auto;
+    width:50%;
+}
+
+.title{
+    font-size: 25px;
+    margin-left: 5px;
+    width: 10%;
+}
+
+.login-form {
+    max-width: 400px;
+
+}
+.login-form-forgot {
+    float: right;
+}
+.ant-col-rtl .login-form-forgot {
+    float: left;
+}
+.login-form-button {
+    width: 100%;
+}
+
+.user-login {
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
