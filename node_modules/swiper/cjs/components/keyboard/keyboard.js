@@ -16,6 +16,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 var Keyboard = {
   handle: function handle(event) {
     var swiper = this;
+    if (!swiper.enabled) return;
     var window = (0, _ssrWindow.getWindow)();
     var document = (0, _ssrWindow.getDocument)();
     var rtl = swiper.rtlTranslate;

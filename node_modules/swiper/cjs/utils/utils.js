@@ -9,6 +9,7 @@ exports.isObject = isObject;
 exports.extend = extend;
 exports.bindModuleMethods = bindModuleMethods;
 exports.getComputedStyle = getComputedStyle;
+exports.classesToSelector = classesToSelector;
 
 var _ssrWindow = require("ssr-window");
 
@@ -161,4 +162,13 @@ function bindModuleMethods(instance, obj) {
 
     instance[key] = obj[key];
   });
+}
+
+function classesToSelector(classes) {
+  if (classes === void 0) {
+    classes = '';
+  }
+
+  return "." + classes.trim().replace(/([\.:\/])/g, '\\$1') // eslint-disable-line
+  .replace(/ /g, '.');
 }

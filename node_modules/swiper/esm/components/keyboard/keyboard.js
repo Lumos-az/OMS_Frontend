@@ -1,11 +1,13 @@
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
+/* eslint-disable consistent-return */
 import { getWindow, getDocument } from 'ssr-window';
 import $ from '../../utils/dom';
 import { bindModuleMethods } from '../../utils/utils';
 var Keyboard = {
   handle: function handle(event) {
     var swiper = this;
+    if (!swiper.enabled) return;
     var window = getWindow();
     var document = getDocument();
     var rtl = swiper.rtlTranslate;

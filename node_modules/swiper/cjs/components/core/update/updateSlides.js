@@ -8,7 +8,7 @@ var _utils = require("../../../utils/utils");
 function updateSlides() {
   var swiper = this;
 
-  var getDirectionLabel = function getDirectionLabel(property) {
+  function getDirectionLabel(property) {
     if (swiper.isHorizontal()) {
       return property;
     } // prettier-ignore
@@ -24,11 +24,11 @@ function updateSlides() {
       'padding-right': 'padding-bottom',
       'marginRight': 'marginBottom'
     }[property];
-  };
+  }
 
-  var getDirectionPropertyValue = function getDirectionPropertyValue(node, label) {
+  function getDirectionPropertyValue(node, label) {
     return parseFloat(node.getPropertyValue(getDirectionLabel(label)) || 0);
-  };
+  }
 
   var params = swiper.params;
   var $wrapperEl = swiper.$wrapperEl,
@@ -42,17 +42,6 @@ function updateSlides() {
   var snapGrid = [];
   var slidesGrid = [];
   var slidesSizesGrid = [];
-
-  function slidesForMargin(slideEl, slideIndex) {
-    if (!params.cssMode) return true;
-
-    if (slideIndex === slides.length - 1) {
-      return false;
-    }
-
-    return true;
-  }
-
   var offsetBefore = params.slidesOffsetBefore;
 
   if (typeof offsetBefore === 'function') {
@@ -294,7 +283,15 @@ function updateSlides() {
     var _slides$filter$css;
 
     var key = swiper.isHorizontal() && rtl ? 'marginLeft' : getDirectionLabel('marginRight');
-    slides.filter(slidesForMargin).css((_slides$filter$css = {}, _slides$filter$css[key] = spaceBetween + "px", _slides$filter$css));
+    slides.filter(function (_, slideIndex) {
+      if (!params.cssMode) return true;
+
+      if (slideIndex === slides.length - 1) {
+        return false;
+      }
+
+      return true;
+    }).css((_slides$filter$css = {}, _slides$filter$css[key] = spaceBetween + "px", _slides$filter$css));
   }
 
   if (params.centeredSlides && params.centeredSlidesBounds) {

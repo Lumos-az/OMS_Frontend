@@ -2,23 +2,23 @@ import React, {Component} from 'react';
 
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
-import MainPage from "./MainPage/MainPage";
+import MainPage from "./Group_E/MainPage/MainPage";
 
-import './assets/css/MainPage.css'
+import './Group_E/assets/css/MainPage.css'
 
-import "./assets/css/SignInPage.css";
+import "./Group_E/assets/css/SignInPage.css";
 
-import './assets/css/App.css';
+import './Group_E/assets/css/App.css';
 
-import PersonalInfo from './PersonalInfo/PersonalInfo';
+import PersonalCenter from './Group_E/UserCenter/PersonalCenter';
 
-import FindPasswordPage from "./Part1File/FindPasswordPage";
+import FindPasswordPage from "./Group_E/Register_FindPsd/FindPasswordPage";
 
-import RegisterPage from "./Part1File/RegisterPage";
+import RegisterPage from "./Group_E/Register_FindPsd/RegisterPage";
 
-import Appointment from './PersonalInfo/Appointment';
+import Appointment from './Group_E/UserCenter/Appointment';
 
-import Test from './PersonalInfo/Test';
+import Test from './Group_E/UserCenter/Test';
 
 var storage = window.localStorage;
 
@@ -31,7 +31,7 @@ class App extends Component{
             <Switch>
               <Route exact path = "/" component = {MainPage}/>
               <Route path="/FindPasswordPage" component={FindPasswordPage}/>
-              <Route path="/PersonalInfo" component={PersonalInfo}/>
+              <Route path="/PersonalInfo" component={PersonalCenter}/>
               <Route path="/RegisterPage" component={RegisterPage}/>
               <Route path="/Appointment" component={Appointment}/>
               <Route path="/Test" component={Test}/>

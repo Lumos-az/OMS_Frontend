@@ -1,0 +1,118 @@
+.basicPage
+{
+    flex-direction: column;
+    justify-content: center;
+    min-width: 71.25rem;
+    margin-bottom: 2.5rem;
+    z-index: 0;
+}
+.topPart
+{
+    background-color: white;
+}
+.topPartTitle
+{
+    align-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-family: 微软雅黑, serif;
+    background-color: white;
+}
+.topPartMain
+{
+    background-color: white;
+    flex-direction: row;
+}
+.TopPartPost
+{
+    flex-direction: row;
+    display: flex;
+}
+.postIMG
+{
+    height: 300px;
+    margin-bottom: 1.5rem;
+    float: left;
+    margin-right: 10px;
+}
+.postText
+{
+    font-size: 1rem;
+    font-family: 微软雅黑, serif;
+    margin-bottom: 1.5rem;
+
+}
+
+.leftPart
+{
+    background-color: white;
+}
+.leftPartTitle
+{
+    font-size: 2.5rem;
+    font-family: 微软雅黑, serif;
+
+}
+.rightPart
+{
+    background-color: white;
+
+}
+.rightPartTitle
+{
+    font-size: 2.5rem;
+    font-family: 微软雅黑, serif;
+
+}
+.list_conts_0_1
+{   width:99px;
+    float:left;
+    font-size:14px;
+    color:#666;
+    line-height:24px;
+    margin-left:0px;
+    margin-top:10px
+}
+.list_0{ width:230px; height:66px; float:left; margin-top:6px;}
+.left_img{ width:118px;  height:66px; float:left; margin-left:25px;}
+.list_conts_0_0{ width:99px; float:left; font-size:14px; color:#666; line-height:24px; margin-left:20px; margin-top:10px}
+.list_conts_0_1{ width:99px; float:left; font-size:14px; color:#666; line-height:24px; margin-left:0px; margin-top:10px}
+
+.list_01{ width:250px; height:66px; float:left; margin-top:18px;}
+.left_img{ width:118px;  height:66px; float:left; margin-left:25px;}
+.list_conts{ width:75px; float:left; font-size:14px; color:#666; line-height:24px; margin-left:15px; margin-top:10px}
+
+.list_02{ width:250px; height:66px; float:left; margin-top:18px;}
+.left_img{ width:118px;  height:66px; float:left; margin-left:25px;}
+.list_conts_02{ width:75px; float:left; font-size:14px; color:#666; line-height:24px; margin-left:15px; margin-top:-15px}
+
+.list_03{ width:265px; height:66px; float:left; margin-top:18px;}
+.left_img{ width:118px;  height:66px; float:left; margin-left:25px;}
+.list_conts_03{ width:75px; float:left; font-size:14px; color:#666; line-height:24px; margin-left:15px; margin-top:-5px}
+
+.list_04{ width:265px; height:80px; float:left; margin-top:18px;margin-bottom: 10px;}
+.left_img{ width:118px;  height:66px; float:left; margin-left:25px;}
+.list_conts_04{ width:88px; float:left; font-size:14px; color:#666; line-height:24px; margin-left:15px; margin-top:-5px}
+.line_img{ width:1px; float:left}
+
+.pic_choose
+{       width: 1268px;
+    height:104px;
+    margin:0px auto;
+    background:#f5f9fc;
+    clear:both;
+    margin-top:15px;
+    margin-bottom:15px;
+    overflow:hidden;
+    border:1px solid #daeaff;
+
+}
+.slideBox { width: 528px; height: 230px; overflow: hidden; position: relative; float: left; }
+.slideBox .hd { height: 15px; overflow: hidden; position: absolute; right: 5px; bottom: 5px; z-index: 1; }
+.slideBox .hd ul { overflow: hidden; zoom: 1; float: left; }
+.slideBox .hd ul li { float: left; margin-right: 2px; width: 15px; height: 15px; line-height: 14px; text-align: center; background: #fff; cursor: pointer; }
+.slideBox .hd ul li.on { background: #dd6664; color: #fff; }
+.slideBox .bd { position: relative; height: 100%; z-index: 0; }
+.slideBox .bd li { zoom: 1; vertical-align: middle; }
+.slideBox .bd img { width: 528px; height: 230px; display: block; }
+.container { width: 1000px; margin: 0 auto; }
