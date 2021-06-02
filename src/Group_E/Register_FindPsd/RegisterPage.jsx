@@ -9,8 +9,6 @@ const { Option } = Select;
 var storage=window.localStorage;
 const defaultUrl = 'http://127.0.0.1:5003';
 
-
-
 const formItemLayout = {
   labelCol: {
     xs: { span: 24 },
@@ -57,6 +55,9 @@ class RegisterPage extends Component {
             realName:'',
             address:'',
             phone:'',
+            age:'',
+            sex:'',
+            other:'无',
             loading:false,
         }
     }
@@ -109,6 +110,27 @@ class RegisterPage extends Component {
         console.log(this.state.phone)
     }
 
+    getSex=(e)=>{
+        this.setState({
+            sex:e.target.value
+        })
+        console.log(this.state.sex)
+    }
+
+    getAge=(e)=>{
+        this.setState({
+            age:e.target.value
+        })
+        console.log(this.state.age)
+    }
+
+    getOther=(e)=>{
+        this.setState({
+            other:e.target.value
+        })
+        console.log(this.state.other)
+    }
+
     registerPost=()=>{
         this.setState({
             loading:true
@@ -122,6 +144,9 @@ class RegisterPage extends Component {
             realName:this.state.realName,
             address:this.state.address,
             phone:this.state.phone,
+            age:this.state.age,
+            sex:this.state.sex,
+            other:this.state.other,
         };
         console.log(params)
         axios({
@@ -155,7 +180,7 @@ class RegisterPage extends Component {
                     <TopBar/>
                 </Header>
                 <Content className='mycontent' >
-                    <div className={"user-register"} style={{border:"solid"}}>
+                    <div className={"user-register"}>
                         <Form
                             className="register-form"
                             style={{width:"100%"}}
@@ -244,6 +269,22 @@ class RegisterPage extends Component {
                             </Form.Item>
 
                             <Form.Item
+                                name="age"
+                                label="年龄"
+                                rules={[{ required: true, message: '请输入年龄!', whitespace: true }]}
+                            >
+                                <Input onChange={(e)=>this.getAge(e)}/>
+                            </Form.Item>
+
+                            <Form.Item
+                                name="sex"
+                                label="性别"
+                                rules={[{ required: true, message: '请输入性别!', whitespace: true }]}
+                            >
+                                <Input onChange={(e)=>this.getSex(e)}/>
+                            </Form.Item>
+
+                            <Form.Item
                                 name="phone"
                                 label="手机号"
                                 rules={[{ required: true, message: '请输入手机号!' }]}
@@ -264,6 +305,14 @@ class RegisterPage extends Component {
                                 ]}
                             >
                                 <Input onChange={(e)=>this.getAddress(e)}/>
+                            </Form.Item>
+
+                            <Form.Item
+                                name="other"
+                                label="不良习惯或疾病史"
+                                rules={[{ message: '请输入不良习惯或疾病史!', whitespace: true }]}
+                            >
+                                <Input onChange={(e)=>this.getOther(e)}/>
                             </Form.Item>
 
                             <Form.Item

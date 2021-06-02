@@ -42,12 +42,12 @@ class PersonalCenter extends React.Component {
             nickname:storage['nickname'],
             address:'',
             collapsed: false,
-            page:'1',
+            page:'0',
         }
     }
 
     componentDidMount() {
-
+        console.log(this.state.identity)
     }
 
     onCollapse = collapsed => {
@@ -57,33 +57,57 @@ class PersonalCenter extends React.Component {
         });
     };
 
-    switchToPage1=()=>{
+    switchToCommonPage=()=>{
         this.setState({
-            page:'1',
+            page:'0',
         })
     }
 
-    switchToPage2=()=>{
+    switchToUserPage1=()=>{
         this.setState({
-            page:'2',
+            page:'01',
         })
     }
 
-    switchToPage3=()=>{
+    switchToUserPage2=()=>{
         this.setState({
-            page:'3',
+            page:'02',
+        })
+    }
+
+    switchToDocPage1=()=>{
+        this.setState({
+            page:'11',
+        })
+    }
+
+    switchToDocPage2=()=>{
+        this.setState({
+            page:'12',
+        })
+    }
+
+    switchToAdmPage1=()=>{
+        this.setState({
+            page:'21',
+        })
+    }
+
+    switchToAdmPage2=()=>{
+        this.setState({
+            page:'32',
         })
     }
 
     commonUser = (
         <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
-            <Menu.Item key="1" icon={<UserOutlined />} onClick={this.switchToPage1}>
+            <Menu.Item key="1" icon={<UserOutlined />} onClick={this.switchToCommonPage}>
                 个人中心
             </Menu.Item>
-            <Menu.Item key="2" icon={<DesktopOutlined />} onClick={this.switchToPage2}>
+            <Menu.Item key="2" icon={<DesktopOutlined />} onClick={this.switchToUserPage1}>
                 预约记录
             </Menu.Item>
-            <Menu.Item key="3" icon={<TeamOutlined />} onClick={this.switchToPage3}>
+            <Menu.Item key="3" icon={<TeamOutlined />} onClick={this.switchToUserPage2}>
                 咨询记录
             </Menu.Item>
         </Menu>
@@ -91,13 +115,13 @@ class PersonalCenter extends React.Component {
 
     doctorUser = (
         <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
-            <Menu.Item key="1" icon={<UserOutlined />} onClick={this.switchToPage1}>
+            <Menu.Item key="1" icon={<UserOutlined />} onClick={this.switchToCommonPage}>
                 个人中心
             </Menu.Item>
-            <Menu.Item key="2" icon={<DesktopOutlined />} onClick={this.switchToPage2}>
+            <Menu.Item key="2" icon={<DesktopOutlined />} onClick={this.switchToDocPage1}>
                 预约记录
             </Menu.Item>
-            <Menu.Item key="3" icon={<TeamOutlined />} onClick={this.switchToPage3}>
+            <Menu.Item key="3" icon={<TeamOutlined />} onClick={this.switchToDocPage2}>
                 咨询记录
             </Menu.Item>
         </Menu>
@@ -105,14 +129,14 @@ class PersonalCenter extends React.Component {
 
     adminUser = (
         <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
-            <Menu.Item key="1" icon={<UserOutlined />} onClick={this.switchToPage1}>
+            <Menu.Item key="1" icon={<UserOutlined />} onClick={this.switchToCommonPage}>
                 个人中心
             </Menu.Item>
-            <Menu.Item key="2" icon={<DesktopOutlined />} onClick={this.switchToPage2}>
-                预约记录
+            <Menu.Item key="2" icon={<DesktopOutlined />} onClick={this.switchToAdmPage1}>
+                XX
             </Menu.Item>
-            <Menu.Item key="3" icon={<TeamOutlined />} onClick={this.switchToPage3}>
-                咨询记录
+            <Menu.Item key="3" icon={<TeamOutlined />} onClick={this.switchToAdmPage2}>
+                XXX
             </Menu.Item>
         </Menu>
     )
@@ -127,7 +151,11 @@ class PersonalCenter extends React.Component {
                         (this.state.identity==='0')?(
                             this.commonUser
                         ):(
-                            this.doctorUser
+                            (this.state.identity==='1')?(
+                                this.doctorUser
+                            ):(
+                                this.adminUser
+                            )
                         )
                     }
                 </Sider>
@@ -144,23 +172,14 @@ class PersonalCenter extends React.Component {
                                 (this.state.page==='1')?(
                                     <UserInfo></UserInfo>
                                 ):(
-                                    ''
+                                    (this.state.page==='2')?(
+                                        <UserAppointment></UserAppointment>
+                                    ):(
+                                        <UserCounsel></UserCounsel>
+                                    )
                                 )
                             }
-                            {
-                                (this.state.page==='2')?(
-                                    <UserAppointment></UserAppointment>
-                                ):(
-                                    ''
-                                )
-                            }
-                            {
-                                (this.state.page==='3')?(
-                                    <UserCounsel></UserCounsel>
-                                ):(
-                                    ''
-                                )
-                            }
+
                         </div>
                     </Content>
                     <Footer style={{ textAlign: 'center' }}>SE Design ©2021 Created by Online Medical System</Footer>
