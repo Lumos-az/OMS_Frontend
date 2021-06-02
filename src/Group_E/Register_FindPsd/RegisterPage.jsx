@@ -55,7 +55,6 @@ class RegisterPage extends Component {
             realName:'',
             address:'',
             phone:'',
-            age:'',
             sex:'',
             other:'无',
             loading:false,
@@ -117,13 +116,6 @@ class RegisterPage extends Component {
         console.log(this.state.sex)
     }
 
-    getAge=(e)=>{
-        this.setState({
-            age:e.target.value
-        })
-        console.log(this.state.age)
-    }
-
     getOther=(e)=>{
         this.setState({
             other:e.target.value
@@ -144,7 +136,6 @@ class RegisterPage extends Component {
             realName:this.state.realName,
             address:this.state.address,
             phone:this.state.phone,
-            age:this.state.age,
             sex:this.state.sex,
             other:this.state.other,
         };
@@ -266,14 +257,6 @@ class RegisterPage extends Component {
                                 rules={[{ required: true, message: '请输入真实姓名!', whitespace: true }]}
                             >
                                 <Input onChange={(e)=>this.getRealName(e)}/>
-                            </Form.Item>
-
-                            <Form.Item
-                                name="age"
-                                label="年龄"
-                                rules={[{ required: true, message: '请输入年龄!', whitespace: true }]}
-                            >
-                                <Input onChange={(e)=>this.getAge(e)}/>
                             </Form.Item>
 
                             <Form.Item
