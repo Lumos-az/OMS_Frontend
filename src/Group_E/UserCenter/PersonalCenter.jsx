@@ -13,6 +13,7 @@ import BasicInformation from "../MainPage/BasicInformation";
 import axios from "axios";
 import UserInfo from "./UserInfo";
 import UserAppointment from "./UserAppointment";
+import DocAppointment from "./DocAppointment";
 import UserCounsel from "./UserCounsel";
 
 
@@ -95,7 +96,7 @@ class PersonalCenter extends React.Component {
 
     switchToAdmPage2=()=>{
         this.setState({
-            page:'32',
+            page:'22',
         })
     }
 
@@ -169,14 +170,52 @@ class PersonalCenter extends React.Component {
                         </Breadcrumb>
                         <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
                             {
-                                (this.state.page==='1')?(
+                                (this.state.page==='0')?(
                                     <UserInfo></UserInfo>
                                 ):(
-                                    (this.state.page==='2')?(
-                                        <UserAppointment></UserAppointment>
-                                    ):(
-                                        <UserCounsel></UserCounsel>
-                                    )
+                                    ''
+                                )
+                            }
+                            {
+                                (this.state.page === '01')?(
+                                    <UserAppointment></UserAppointment>
+                                ):(
+                                    ''
+                                )
+                            }
+                            {
+                                (this.state.page === '02')?(
+                                    <UserCounsel></UserCounsel>
+                                ):(
+                                    ''
+                                )
+                            }
+                            {
+                                (this.state.page === '11')?(
+                                    <DocAppointment></DocAppointment>
+                                ):(
+                                    ''
+                                )
+                            }
+                            {
+                                (this.state.page === '12')?(
+                                    <UserCounsel></UserCounsel>
+                                ):(
+                                    ''
+                                )
+                            }
+                            {
+                                (this.state.page === '21')?(
+                                    <UserCounsel></UserCounsel>
+                                ):(
+                                    ''
+                                )
+                            }
+                            {
+                                (this.state.page === '22')?(
+                                    <UserCounsel></UserCounsel>
+                                ):(
+                                    ''
                                 )
                             }
 
