@@ -1,5 +1,5 @@
 import React, { useState, Component } from 'react';
-import {Form, Input, Cascader, Select, Row, Col, Checkbox, Button, AutoComplete, Layout, message} from 'antd';
+import {Form, Input, Cascader, Select, Row, Col, Checkbox, Button, AutoComplete, Layout, message, Radio} from 'antd';
 import TopBar from "../Component/TopBar";
 import '../assets/css/RegisterPage.css';
 import axios from "axios";
@@ -8,7 +8,7 @@ const { Option } = Select;
 
 var storage=window.localStorage;
 const defaultUrl = 'http://127.0.0.1:5003';
-
+const { TextArea } = Input;
 const formItemLayout = {
   labelCol: {
     xs: { span: 24 },
@@ -32,17 +32,6 @@ const tailFormItemLayout = {
   },
 };
 
-const prefixSelector = (
-    <Form.Item name="prefix" noStyle>
-        <Select style={{width: 70}}>
-            <Option value="86">+86</Option>
-            <Option value="81">+81</Option>
-            <Option value="1">+1</Option>
-            <Option value="44">+44</Option>
-        </Select>
-    </Form.Item>
-);
-
 
 class RegisterPage extends Component {
     constructor(props) {
@@ -58,6 +47,11 @@ class RegisterPage extends Component {
             sex:'',
             other:'无',
             loading:false,
+            registerType:"user",
+            proField:'',
+            hospital:'',
+            section:'',
+            introduction:'',
         }
     }
 
@@ -123,6 +117,38 @@ class RegisterPage extends Component {
         console.log(this.state.other)
     }
 
+    getRegisterType=(e)=> {
+        this.setState({
+            registerType:e.target.value
+        })
+        console.log(this.state.registerType)
+    }
+
+
+    getProField=(e)=> {
+        this.setState({
+            proField:e.target.value
+        })
+    }
+
+    getHospital=(e)=> {
+        this.setState({
+            hospital:e.target.value
+        })
+    }
+
+    getSection=(e)=> {
+        this.setState({
+            section:e.target.value
+        })
+    }
+
+    getIntroduction=(e)=> {
+        this.setState({
+            introduction:e.target.value
+        })
+    }
+
     registerPost=()=>{
         this.setState({
             loading:true
@@ -138,6 +164,11 @@ class RegisterPage extends Component {
             phone:this.state.phone,
             sex:this.state.sex,
             other:this.state.other,
+            registerType:this.state.registerType,
+            proField:this.state.proField,
+            hospital:this.state.hospital,
+            section:this.state.section,
+            introduction:this.state.introduction,
         };
         console.log(params)
         axios({
@@ -210,6 +241,7 @@ class RegisterPage extends Component {
                             <Form.Item
                                 name="password"
                                 label="密码"
+                                tooltip="密码长度至少8个字符，需要包含字母和数字"
                                 rules={[
                                     {
                                     required: true,
@@ -259,21 +291,28 @@ class RegisterPage extends Component {
                                 <Input onChange={(e)=>this.getRealName(e)}/>
                             </Form.Item>
 
+
                             <Form.Item
                                 name="sex"
                                 label="性别"
-                                rules={[{ required: true, message: '请输入性别!', whitespace: true }]}
+                                rules={[
+                                    {  required: true, message: '请选择性别!' },
+                                ]}
                             >
-                                <Input onChange={(e)=>this.getSex(e)}/>
+                                <Radio.Group onChange={(e)=>this.getSex(e)} value = {this.state.sex}>
+                                    <Radio value={"男"}>男</Radio>
+                                    <Radio value={"女"}>女</Radio>
+                                </Radio.Group>
                             </Form.Item>
+
+
 
                             <Form.Item
                                 name="phone"
                                 label="手机号"
-                                rules={[{ required: true, message: '请输入手机号!' }]}
+
                             >
                                 <Input
-                                    addonBefore={prefixSelector}
                                     style={{ width: '100%' }}
                                     onChange={(e)=>this.getPhone(e)}
                                 />
@@ -299,6 +338,81 @@ class RegisterPage extends Component {
                             </Form.Item>
 
                             <Form.Item
+                                name="registerType"
+                                label="注册类型"
+                                rules={[
+                                    {  required: true, message: '请选择注册类型!' },
+                                ]}
+                            >
+                                <Radio.Group onChange={(e)=>this.getRegisterType(e)} value = {this.state.registerType}>
+                                    <Radio value={"user"}>用户</Radio>
+                                    <Radio value={"doctor"}>医生</Radio>
+                                </Radio.Group>
+                            </Form.Item>
+                            {
+                                (this.state.registerType === "doctor") ? (
+                                    <Form.Item
+                                        name="proField"
+                                        label="擅长领域"
+                                        rules={[
+                                            {required: true, message: '请输入擅长领域!'},
+                                        ]}
+                                    >
+                                        <Input onChange={(e) => this.getProField(e)}/>
+                                    </Form.Item>
+                                ) : (
+                                    " "
+                                )
+                            }
+                            {
+                                (this.state.registerType === "doctor") ? (
+                                    <Form.Item
+                                        name="hospital"
+                                        label="所在医院"
+                                        rules={[
+                                            {required: true, message: '请输入所在医院!'},
+                                        ]}
+                                    >
+                                        <Input onChange={(e) => this.getHospital(e)}/>
+                                    </Form.Item>
+                                ) : (
+                                    " "
+                                )
+                            }
+                            {
+                                (this.state.registerType === "doctor") ? (
+                                    <Form.Item
+                                        name="section"
+                                        label="所在科室"
+                                        rules={[
+                                            {required: true, message: '请输入所在科室!'},
+                                        ]}
+                                    >
+                                        <Input onChange={(e) => this.getSection(e)}/>
+                                    </Form.Item>
+                                ) : (
+                                    " "
+                                )
+                            }
+                            {
+                                (this.state.registerType === "doctor") ? (
+                                    <Form.Item
+                                        name="introduction"
+                                        label="个人简介"
+                                        rules={[
+                                            {required: true, message: '请输入个人简介!'},
+                                        ]}
+                                    >
+                                        <TextArea
+                                            onChange={(e) => this.getIntroduction(e)}
+                                            autoSize={{ minRows: 3, maxRows: 5 }}
+                                        />
+                                    </Form.Item>
+                                ) : (
+                                    " "
+                                )
+                            }
+                            <Form.Item
                                 name="agreement"
                                 valuePropName="checked"
                                 rules={[
@@ -310,7 +424,7 @@ class RegisterPage extends Component {
                                 {...tailFormItemLayout}
                             >
                                 <Checkbox>
-                                    我已阅读并同意 <a href="">《医疗预约平台用户注册协议》</a>
+                                    我已阅读并同意 <a href="https://res.1hjk.com/resources/article/doctor_register.html">《医疗预约平台用户注册协议》</a>
                                 </Checkbox>
                             </Form.Item>
 

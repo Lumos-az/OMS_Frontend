@@ -6,6 +6,31 @@
     margin-bottom: 2.5rem;
     z-index: 0;
 }
+.da
+{
+    width: 1268px;
+    height:104px;
+    margin-left:130px;
+    clear:both;
+    margin-top:15px;
+    overflow:hidden;
+   
+}
+.test
+{
+    width: 1000px;
+    height:104px;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    line-height: 2.5;
+    font-size: 1.75rem;
+    font-family: 微软雅黑;
+    color: rgb(107, 113, 120);
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+    margin-left: 0.5rem;
+}
 .topPart
 {
     background-color: white;
@@ -96,7 +121,8 @@
 .line_img{ width:1px; float:left}
 
 .pic_choose
-{       width: 1268px;
+{       
+    width: 1268px;
     height:104px;
     margin:0px auto;
     background:#f5f9fc;
@@ -116,3 +142,38 @@
 .slideBox .bd li { zoom: 1; vertical-align: middle; }
 .slideBox .bd img { width: 528px; height: 230px; display: block; }
 .container { width: 1000px; margin: 0 auto; }
+.ttt
+{
+  
+ 
+
+    height: 10rem;
+
+   
+    border-width: 8px 1px 1px 1px;
+    border-style: solid;
+    border-color: #6b7178;
+    box-sizing: border-box; 
+    
+}
+.contentStyle
+{
+    
+    height: 9.8rem;
+    color: black;
+    font-size: 22px;
+    font-family: 微软雅黑;
+    padding-top: 2.5rem;
+    background-color: rgb(205, 210, 216);
+
+    
+
+   
+  }
+  .uuu
+  {
+    color: rgb(94, 89, 89);
+    font-size: 10px;
+    line-height: 10px;
+  }
+  

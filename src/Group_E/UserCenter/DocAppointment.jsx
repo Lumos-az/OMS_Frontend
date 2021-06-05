@@ -9,18 +9,18 @@ const defaultUrl = 'http://127.0.0.1:5003';
 
 const dataSource = [{
     key: '1',
-    name: '胡歌',
-    time: '2020-10-11 14:00:00',
-    solution: '多滴眼药水'
+    name: '许高高',
+    time: '2021-6-9 14:00:00',
+    solution: '眼睛酸痛'
 }, {
     key: '2',
-    name: '杨幂',
-    time: '2020-12-12 14:00:00',
-    solution: '多喝开水'
+    name: '唐大大',
+    time: '2021-6-10 14:00:00',
+    solution: '肚子经常疼'
 }];
 
 const columns = [{
-    title: '姓名',
+    title: '患者姓名',
     dataIndex: 'name',
     key: 'name',
 }, {
@@ -28,7 +28,7 @@ const columns = [{
     dataIndex: 'time',
     key: 'time',
 }, {
-    title: '解决方案',
+    title: '主要症状',
     dataIndex: 'solution',
     key: 'solution',
 }];

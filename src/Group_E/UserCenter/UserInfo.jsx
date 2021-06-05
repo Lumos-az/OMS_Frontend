@@ -104,6 +104,7 @@ class UserInfo extends React.Component {
                         phone:newPhone,
                         address:newAddress,
                     });
+                    
                     // window.location.href = "http://localhost:3000"
                 }
                 else{

@@ -15,7 +15,9 @@ import UserInfo from "./UserInfo";
 import UserAppointment from "./UserAppointment";
 import DocAppointment from "./DocAppointment";
 import UserCounsel from "./UserCounsel";
-
+import DocCounsel from "./DocCounsel";
+import DocIdentification from "./DocIdentification";
+import UserIdentifyToDoc from "./UserIdentifyToDoc";
 
 let storage = window.localStorage;
 const defaultUrl = 'http://127.0.0.1:5003';
@@ -75,6 +77,11 @@ class PersonalCenter extends React.Component {
             page:'02',
         })
     }
+    switchToUserPage3=()=>{
+        this.setState({
+            page:'03',
+        })
+    }
 
     switchToDocPage1=()=>{
         this.setState({
@@ -111,6 +118,9 @@ class PersonalCenter extends React.Component {
             <Menu.Item key="3" icon={<TeamOutlined />} onClick={this.switchToUserPage2}>
                 咨询记录
             </Menu.Item>
+            <Menu.Item key="4" icon={<TeamOutlined />} onClick={this.switchToUserPage3}>
+                医生认证
+            </Menu.Item>
         </Menu>
     )
 
@@ -134,7 +144,7 @@ class PersonalCenter extends React.Component {
                 个人中心
             </Menu.Item>
             <Menu.Item key="2" icon={<DesktopOutlined />} onClick={this.switchToAdmPage1}>
-                XX
+                医生管理
             </Menu.Item>
             <Menu.Item key="3" icon={<TeamOutlined />} onClick={this.switchToAdmPage2}>
                 XXX
@@ -191,6 +201,13 @@ class PersonalCenter extends React.Component {
                                 )
                             }
                             {
+                                (this.state.page === '03')?(
+                                    <UserIdentifyToDoc></UserIdentifyToDoc>
+                                ):(
+                                    ''
+                                )
+                            }
+                            {
                                 (this.state.page === '11')?(
                                     <DocAppointment></DocAppointment>
                                 ):(
@@ -199,14 +216,14 @@ class PersonalCenter extends React.Component {
                             }
                             {
                                 (this.state.page === '12')?(
-                                    <UserCounsel></UserCounsel>
+                                   <DocCounsel></DocCounsel>
                                 ):(
                                     ''
                                 )
                             }
                             {
                                 (this.state.page === '21')?(
-                                    <UserCounsel></UserCounsel>
+                                    <DocIdentification></DocIdentification>
                                 ):(
                                     ''
                                 )

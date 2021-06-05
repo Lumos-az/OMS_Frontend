@@ -21,7 +21,7 @@ const dataSource = [{
 }];
 
 const columns = [{
-  title: '姓名',
+  title: '医生姓名',
   dataIndex: 'name',
   key: 'name',
 }, {

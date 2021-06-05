@@ -44,6 +44,7 @@ class TopBar extends React.Component{
                 }
                 else{
                     storage['islogin']=true
+
                     this.setState({
                         getMenu:false,
                     })
@@ -212,7 +213,7 @@ class TopBar extends React.Component{
                             >
                                 <Input
                                     prefix={<UserOutlined className="site-form-item-icon" />}
-                                    placeholder="用户名"
+                                    placeholder="用户名或手机号"
                                     type="username"
                                     onChange={(e)=>this.getUsername(e)}/>
                             </Form.Item>
