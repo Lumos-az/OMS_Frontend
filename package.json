@@ -4,19 +4,29 @@
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.2.2",
+    "@icon/ionicons": "^5.4.0-alpha.0",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.3",
     "antd": "^4.8.0",
+    "antd-mobile": "^2.3.4",
     "axios": "^0.21.1",
+    "goeasy-im": "^1.5.1",
+    "moment": "^2.23.0",
     "react": "^17.0.1",
+    "react-audio-player": "^0.17.0",
+    "react-chat-elements": "^10.14.0",
     "react-dom": "^17.0.1",
-    "react-responsive-carousel": "^3.2.18",
+    "react-image-file-resizer": "^0.4.4",
+    "react-keeper": "^2.2.3",
+    "react-mic": "^12.4.6",
+    "react-native-vector-icons": "^4.6.0",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
-    "save": "^2.4.0",
-    "swiper": "^6.5.3",
+    "react-shave": "^1.0.1",
+    "shave": "^2.5.10",
+    "styled-components": "^5.3.0",
     "web-vitals": "^1.1.1"
   },
   "scripts": {
@@ -42,5 +52,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "react-highlight-words": "^0.17.0"
   }
 }

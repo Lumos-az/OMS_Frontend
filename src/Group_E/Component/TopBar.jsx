@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import axios from "axios";
 
 var storage=window.localStorage;
-const defaultUrl = 'http://127.0.0.1:5003';
+const defaultUrl = 'http://10.112.196.176:5003';
 
 
 

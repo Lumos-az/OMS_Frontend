@@ -20,7 +20,7 @@ import DocIdentification from "./DocIdentification";
 import UserIdentifyToDoc from "./UserIdentifyToDoc";
 
 let storage = window.localStorage;
-const defaultUrl = 'http://127.0.0.1:5003';
+const defaultUrl = 'http://10.112.196.176:5003';
 
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
@@ -101,11 +101,11 @@ class PersonalCenter extends React.Component {
         })
     }
 
-    switchToAdmPage2=()=>{
-        this.setState({
-            page:'22',
-        })
-    }
+    // switchToAdmPage2=()=>{
+    //     this.setState({
+    //         page:'22',
+    //     })
+    // }
 
     commonUser = (
         <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
@@ -146,9 +146,9 @@ class PersonalCenter extends React.Component {
             <Menu.Item key="2" icon={<DesktopOutlined />} onClick={this.switchToAdmPage1}>
                 医生管理
             </Menu.Item>
-            <Menu.Item key="3" icon={<TeamOutlined />} onClick={this.switchToAdmPage2}>
+            {/* <Menu.Item key="3" icon={<TeamOutlined />} onClick={this.switchToAdmPage2}>
                 XXX
-            </Menu.Item>
+            </Menu.Item> */}
         </Menu>
     )
 

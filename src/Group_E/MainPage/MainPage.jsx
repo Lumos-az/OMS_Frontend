@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Layout} from "antd";
-import TopBar from "../Component/TopBar";
+import TopBar from "../../Component/TopBar";
 import BasicInformation from './BasicInformation.jsx'
 const {Header, Content} = Layout
 

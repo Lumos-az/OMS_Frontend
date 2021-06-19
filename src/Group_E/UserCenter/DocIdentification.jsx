@@ -7,7 +7,7 @@ import zhCN from 'antd/lib/locale/zh_CN';
 import axios from "axios";
 
 let storage = window.localStorage;
-const defaultUrl = 'http://127.0.0.1:5003';
+const defaultUrl = 'http://10.112.196.176:5003';
 
 moment.locale('zh-cn');
 const dataSource = [

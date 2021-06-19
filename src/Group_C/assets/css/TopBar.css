@@ -1,0 +1,51 @@
+.TopBar{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: nowrap;
+    height: 64px;
+    align-items: center;
+    box-shadow: 0 0 6px #888888;
+    position: relative;
+    z-index: 999;
+    background-color: #ffffff;
+    padding-right: 15px;
+    width: 100%;
+}
+
+.logo{
+    width: 45px;
+    height: 50px;
+    padding-top: 10px;
+   margin-left: 2%;
+    margin-right: 5px;
+}
+
+.User{
+    padding-top: 10px;
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+.Menu{
+    margin-left: 10px;
+    margin-right: 5px;
+    width:50%;
+}
+.Search{
+    padding-top: 30px;
+}
+.title{
+    font-size: 25px;
+    margin-left: 5px;
+    width: 10%;
+}
+
+.username{
+    margin-left: 5px;
+    font-size: 5px;
+    width: 10%;
+}

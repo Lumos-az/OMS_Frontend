@@ -1,0 +1,184 @@
+.mainPage{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    min-width: 71.25rem;
+    margin-bottom: 2.5rem;
+    z-index: 0;
+}
+
+.articleleftPart{
+    display: flex;
+    flex-direction: column;
+    width: 51.25rem;
+    margin-right: 1.25rem;
+}
+
+.articlerightPart{
+    display: flex;
+    flex-direction: column;
+    width: 18.75rem;
+}
+
+.topNotice{
+    display: flex;
+    flex-direction: column;
+    width: 51.25rem;
+    margin-top: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.recommendedReading {
+    display: flex;
+    flex-direction: column;
+    width: 51.25rem;
+    margin-top: 0.75rem;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mainPageList {
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    margin-top: 2rem;
+}
+
+.allNotice{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0.75rem;
+}
+
+.mainPageTitle1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.25rem;
+    font-family: 微软雅黑, serif;
+    padding-left: 0.75rem;
+    color: rgb(70, 141, 57);
+}
+
+.mainPageTitle2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.25rem;
+    font-family: 微软雅黑, serif;
+    padding-left: 0.75rem;
+    color: rgb(41, 117, 138);
+}
+
+.mainPageTitleRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.topNoticeContent{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    padding: 1rem 1.25rem;
+    border-width: 8px 1px 1px 1px;
+    border-style: solid;
+    border-color: #468d39;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.detailtitle{
+    color: #000000 ;
+}
+
+.noticetitle{
+    color: white !important;
+    white-space: pre;
+}
+
+.recommendedReadingContent {
+    display: flex;
+    flex-direction: row;
+    height: 7.5rem;
+    margin-top: 1rem;
+    padding: 1.25rem 1.25rem 0 1.25rem;
+    border-width: 8px 1px 1px 1px;
+    border-style: solid;
+    border-color: #29758a;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.recommendedReadingImage {
+    display: flex;
+    flex-direction: row;
+    margin-right: 1.25rem;
+}
+
+.recommendedReadingImage img {
+    border-radius: 50%;
+    background-color: #29758a;
+    width: 3.75rem;
+    height: 3.75rem;
+}
+
+.recommendTitle{
+    display: flex;
+    margin-top: 1.1rem;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.mainPageListContent1 {
+    display: flex;
+    flex-direction: column;
+    height: 20rem;
+    margin-top: 1rem;
+    padding: 1rem 1.25rem;
+    border-width: 8px 1px 1px 1px;
+    border-style: solid;
+    border-color: #468d39;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.schoolNewsContent {
+    display: flex;
+    flex-direction: column;
+    height: 23rem;
+    margin-top: 1rem;
+    padding: 1.5rem 1.25rem 1rem 1.25rem;
+    box-sizing: border-box;
+    background-color: #29758a;
+}
+
+.Search{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: nowrap;
+    align-items: center;
+    position: relative;
+    padding-top: 10px;
+    margin-left: 0;
+
+
+}
+
+.myempty{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+}

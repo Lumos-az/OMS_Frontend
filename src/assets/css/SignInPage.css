@@ -1,0 +1,9 @@
+.container {
+    margin-top: 200px;
+    max-width: 474px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #f0f2f5;
+    text-align: center;
+    font-family: "Graphik", Helvetica, sans-serif;
+}

@@ -1,0 +1,39 @@
+
+.back-logo{
+    height: 30px;
+    margin-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+.site-layout-sub-header {
+  text-align: right;
+}
+
+.headline{
+    color:#fff;
+    display: inline;
+    margin-right: 20px;
+}
+
+.site-layout-background {
+  background: #fff;
+}
+
+.admin-back{
+    color: #fff;
+    margin-left: 30px;
+    margin-top: 20px;
+    font-size: large;
+}
+
+.courseInput{
+
+    width: 100%;
+}
+
+.justify-btm{
+    justify-items: center;
+    justify-content: center;
+}

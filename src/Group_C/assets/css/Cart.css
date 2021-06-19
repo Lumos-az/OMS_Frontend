@@ -1,0 +1,10 @@
+.productName{
+    white-space: pre;
+}
+.act{
+    width: 100px;
+}
+.productName{
+    width: 100px;
+    text-align: center;
+}

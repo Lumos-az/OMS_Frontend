@@ -1,0 +1,56 @@
+.post-back-ground{
+  background-color: #ffffff;
+}
+
+.PostBigPost{
+    font-weight: 600;
+    font-size: 25px;
+
+}
+
+.site-page-header-ghost-wrapper {
+    background-color: #f5f5f5;
+    padding: 24px;
+    margin-Left: 200px;
+    margin-Right: 200px;
+}
+
+.comment-list{
+  background-color: #ffffff;
+  padding: 24px;
+  margin-Right: 224px;
+  margin-left: 224px;
+}
+
+.comment-back-ground{
+    background-color: #f5f5f5;
+}
+
+.comment-box{
+  margin-top: 20px;
+  margin-Right: 224px;
+  margin-left: 224px;
+}
+
+.posttitle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+}
+
+.Search{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: nowrap;
+    align-items: center;
+    position: relative;
+    padding-top: 10px;
+    margin-left: auto;
+
+
+}

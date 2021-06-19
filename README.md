@@ -1,3 +1,20 @@
+# 6.10 更新--yarn大法好
+B组新增录音功能，其中所需的`react-mic`和本环境下的`React`版本有冲突，npm解决该冲突（确实烂），所以转用`yarn`来代替`npm`。使用操作大致如下：
+1. 安装yarn
+```shell
+npm install -g yarn
+```
+2. 进行软件包下载/更新
+```shell
+yarn
+```
+3. 部署开发环境
+```shell
+yarn start
+```
+
+
+
 # 整合相关
 ## 整合要求
 1. 将本组src文件加内的文件上传至仓库的src中的GroupX（X为本组的组号），注意不需要上传`App.js`, `index.js`, `index.css`。

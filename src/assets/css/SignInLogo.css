@@ -1,0 +1,22 @@
+.logo-slogan {
+    height: 136px;
+    margin-bottom: 24px;
+    box-sizing: border-box;
+}
+
+.sign-in-logo {
+    display: block;
+    width: 72px;
+    height: 72px;
+    margin: auto;
+}
+
+.sign-in-to-om {
+    color: #191925;
+    font-family: "Graphik", Helvetica, sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    text-align: center;
+}
+
